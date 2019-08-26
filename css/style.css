@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    transition: 0.5s;
+    color: #979797;
+}
+
+#main {
+    width: 92%;
+    max-width: 1400px;
+    /* 外距：上下 左右 */
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* 導覽列 */
+#navigation {
+    padding: 40px 0 0 10px;
+    overflow: hidden;
+    height: 10vh;
+}
+#logo {
+    float: left;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+}
+#logo a {
+    text-decoration: none;
+    color: #979797;
+}
+#logo a::before {
+    content: "{";
+    vertical-align: 3.5px;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+#logo a::after {
+    content: "}";
+    vertical-align: 3.5px;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+#nav-bar {
+    float: right;
+    vertical-align: bottom;
+}
+#nav-bar a {
+    text-decoration: none;
+    margin-left: 35px;
+    color: #979797;
+    display: inline-block;
+    font-weight: 600;
+
+    /* 定位：相對定位 (父元素) */
+    position: relative;
+}
+#nav-bar a:hover {
+    color: gold;
+}
+#nav-bar a:hover::before {
+    background-color: gold;
+}
+#nav-bar a::before {
+    content: "";
+    /* 定位：絕對定位 (子元素) */
+    position: absolute;
+    background-color: #979797;
+    width: 98%;
+    height: 1px;
+    /* 上下 左右 */
+    margin: 0 1%;
+    bottom: -3px;
+}
+
+/* 作品區 */
+.work-img img {
+    width: 150%;
+    max-width: 700px;
+    position: absolute;
+    left: -60%;
+    top: 25%;
+    transition: none;
+}
+.work-img {
+    background-color: #f1e2c5;
+    position: relative;
+}
+.work {
+    display: none;
+    grid-template-columns: 60% 40%;
+    height: 82vh;
+    padding: 20px 0;
+}
+.active {
+    display: grid;
+}
+
+.work-description {
+    padding-top: 50px;
+}
+.work-description p {
+    padding: 10px 0;
+    margin-top: 30px;
+    line-height: 2.5;
+    width: 300px;
+}
+.work-description h1 {
+    font-weight: 700;
+    font-size: 7em;
+    letter-spacing: 12px;
+}
+
+.work-description .button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: 0.7s;
+}
+.work-description .button:hover {
+    padding-left: 30px;
+}
+
+.work-description hr {
+    height: 3px;
+    width: 300px;
+    background-color: gold;
+    border: none;
+}
+
+.work-chair * {
+    color: #dfc694;
+}
+.work-chair-bg {
+    background-color: #f1e2c5;
+}
+
+/* 作品導覽列 */
+#work-nav {
+    height: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+#work-nav a {
+    padding: 5px 0;
+    text-decoration: none;
+    word-spacing: 10px;
+    position: relative;
+}
+#work-nav a:nth-of-type(1):hover {
+    color: #dfc694;
+}
+#work-nav a:nth-of-type(2):hover {
+    color: #dfc694;
+}
+#work-nav a:nth-of-type(3):hover {
+    color: #dfc694;
+}
+#work-nav a:nth-of-type(1)::after {
+    background-color: #dfc694;
+}
+#work-nav a:nth-of-type(2)::after {
+    background-color: #dfc694;
+}
+#work-nav a:nth-of-type(3)::after {
+    background-color: #dfc694;
+}
+#work-nav a::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: #979797;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 0.3s;
+}
+
+#work-nav a:hover::after {
+    width: 100%;
+}
+
+/* 版權聲明 */
+footer {
+    height: 3vh;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 100;
+    letter-spacing: 3px;
+}

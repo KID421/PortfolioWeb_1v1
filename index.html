@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="KID 個人作品網站，平面、網頁與遊戲設計作品。">
+    <title>KID 個人作品網站 | 首頁</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <header id="navigation">
+            <div id="logo"><a href="index.html">KID</a></div>
+            <nav id="nav-bar">
+                <a href="">WORKS</a>
+                <a href="">INFO</a>
+                <a href="">CONTACT</a>
+            </nav>
+        </header>
+        <section class="work work-chair active">
+            <div class="work-description">
+                <h1>CHA</h1>
+                <h1>– IR</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem incidunt, inventore
+                    ea eaque minus quos nesciunt hic et dolore!</p>
+                <a href="#" class="button">→</a>
+            </div>
+            <div class="work-img work-chair-bg">
+                <img src="img/chair.png" alt="攝影 作品" data-speed="4">
+            </div>
+        </section>
+        <section class="work work-ufo active">
+            <div class="work-description">
+                <h1>123</h1>
+                <h1>– IR</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem incidunt, inventore
+                    ea eaque minus quos nesciunt hic et dolore!</p>
+                <a href="#" class="button">→</a>
+            </div>
+            <div class="work-img work-chair-bg">
+                <img src="img/chair.png" alt="攝影 作品" data-speed="4">
+            </div>
+        </section>
+        <section class="work work-ufo active">
+                <div class="work-description">
+                    <h1>123</h1>
+                    <h1>– IR</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem incidunt, inventore
+                        ea eaque minus quos nesciunt hic et dolore!</p>
+                    <a href="#" class="button">→</a>
+                </div>
+                <div class="work-img work-chair-bg">
+                    <img src="img/chair.png" alt="攝影 作品" data-speed="4">
+                </div>
+            </section>
+        <nav id="work-nav">
+            <a href="#">01 CHAIR</a>
+            <a href="#">02 UFO</a>
+            <a href="#">03 WORK</a>
+        </nav>
+        <footer>Copyright &copy; 2019 KID All rights reserved</footer>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', parallax);
+
+        function parallax(e) {
+            this.querySelectorAll('.work-img img').forEach(layer => {
+                var speed = layer.getAttribute('data-speed');
+                var x = (window.innerWidth - e.pageX * speed) / 100;
+                var y = (window.innerWidth - e.pageY * speed) / 100;
+                layer.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        }
+    </script>
+</body>
+
+</html>
