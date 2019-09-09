@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/test.css">
+    <title>測試頁面</title>
+</head>
+
+<body>
+
+    <h1>滑入顯示文字效果</h1>
+    <div class="img-hover">
+        <img src="img/sea.jpg" alt="海邊">
+        <p>水平垂直置中區塊</p>
+    </div>
+
+    <h1>幻燈片</h1>
+    <div class="slider">
+        <div class="img-hover">
+            <img src="img/sea.jpg" alt="海邊">
+            <p>1</p>
+        </div>
+        <div class="img-hover">
+            <img src="img/sea.jpg" alt="海邊">
+            <p>2</p>
+        </div>
+        <div class="img-hover">
+            <img src="img/sea.jpg" alt="海邊">
+            <p>3</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slider').slick({
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 1500
+        });
+    </script>
+</body>
+
+</html>

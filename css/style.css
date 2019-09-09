@@ -3,7 +3,6 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
-    transition: 0.5s;
     color: #979797;
 }
 
@@ -28,7 +27,7 @@
 }
 #logo a {
     text-decoration: none;
-    color: #979797;
+    color: #fbb400;
 }
 #logo a::before {
     content: "{";
@@ -49,24 +48,25 @@
 #nav-bar a {
     text-decoration: none;
     margin-left: 35px;
-    color: #979797;
+    color: #fbb400;
     display: inline-block;
     font-weight: 600;
+    transition: 0.5s;
 
     /* 定位：相對定位 (父元素) */
     position: relative;
 }
 #nav-bar a:hover {
-    color: gold;
+    color: #fbb400;
 }
 #nav-bar a:hover::before {
-    background-color: gold;
+    background-color: #fbb400;
 }
 #nav-bar a::before {
     content: "";
     /* 定位：絕對定位 (子元素) */
     position: absolute;
-    background-color: #979797;
+    background-color: #fbb400;
     width: 98%;
     height: 1px;
     /* 上下 左右 */
@@ -76,25 +76,37 @@
 
 /* 作品區 */
 .work-img img {
-    width: 150%;
-    max-width: 700px;
-    position: absolute;
-    left: -60%;
-    top: 25%;
+    position: absolute;  
     transition: none;
 }
 .work-img {
     background-color: #f1e2c5;
     position: relative;
 }
+.work-a-bg img {
+    width: 140%;
+    max-width: 700px;
+    left: -60%;
+    top: 10%;
+}
+.work-b-bg img {
+    width: 100%;
+    max-width: 400px;
+    left: -40%;
+    top: 10%;
+}
+.work-c-bg img {
+    width: 100%;
+    max-width: 400px;
+    left: -40%;
+    top: 0;
+}
+
 .work {
-    display: none;
+    display: grid !important;
     grid-template-columns: 60% 40%;
     height: 82vh;
     padding: 20px 0;
-}
-.active {
-    display: grid;
 }
 
 .work-description {
@@ -125,15 +137,27 @@
 .work-description hr {
     height: 3px;
     width: 300px;
-    background-color: gold;
+    background-color: #fbb400;
     border: none;
 }
 
-.work-chair * {
-    color: #dfc694;
+.work-a * {
+    color: #fbb400;
 }
-.work-chair-bg {
-    background-color: #f1e2c5;
+.work-a-bg {
+    background-color: #fbb400;
+}
+.work-b * {
+    color: #3b3331;
+}
+.work-b-bg {
+    background-color: #3b3331;
+}
+.work-c * {
+    color: #eb5e00;
+}
+.work-c-bg {
+    background-color: #eb5e00;
 }
 
 /* 作品導覽列 */
@@ -149,22 +173,22 @@
     position: relative;
 }
 #work-nav a:nth-of-type(1):hover {
-    color: #dfc694;
+    color: #fbb400;
 }
 #work-nav a:nth-of-type(2):hover {
-    color: #dfc694;
+    color: #3b3331;
 }
 #work-nav a:nth-of-type(3):hover {
-    color: #dfc694;
+    color: #fbb400;
 }
 #work-nav a:nth-of-type(1)::after {
-    background-color: #dfc694;
+    background-color: #fbb400;
 }
 #work-nav a:nth-of-type(2)::after {
-    background-color: #dfc694;
+    background-color: #3b3331;
 }
 #work-nav a:nth-of-type(3)::after {
-    background-color: #dfc694;
+    background-color: #fbb400;
 }
 #work-nav a::after {
     content: "";
@@ -190,4 +214,86 @@ footer {
     font-size: 0.7em;
     font-weight: 100;
     letter-spacing: 3px;
+}
+
+/* slick 外掛 */
+.slick-dots {
+    position: static;
+    height: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.slick-dots li {
+    width: 100px;
+}
+
+.slick-dots li:nth-child(1) button:before {
+    content: "PAGE-A";
+    font-size: 20px;
+    color: #fbb400;
+    width: 100px;
+} 
+
+.slick-dots li:nth-child(2) button:before {
+    content: "PAGE-B";
+    font-size: 20px;
+    color: #fbb400;
+    width: 100px;
+} 
+
+.slick-dots li:nth-child(3) button:before {
+    content: "PAGE-C";
+    font-size: 20px;
+    color: #fbb400;
+    width: 100px;
+} 
+
+.slick-dots li button:before {
+    opacity: 1;
+    color: #eee !important;
+}
+
+li.slick-active:nth-child(1) button:before{
+    color: #fbb400 !important;
+}
+
+li.slick-active:nth-child(2) button:before{
+    color: #3b3331 !important;
+}
+
+li.slick-active:nth-child(3) button:before{
+    color: #eb5e00 !important;
+}
+
+.slick-dots li:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    bottom: -5px;
+    left: 12px;
+    width: 0;
+    transition: 0.3s;
+}
+
+.slick-dots li:hover:before {
+    width: 77px;
+}
+
+.slick-dots li:nth-child(1):before {
+    background-color: #fbb400;
+}
+.slick-dots li:nth-child(2):before {
+    background-color: #3b3331;
+}
+.slick-dots li:nth-child(3):before {
+    background-color: #eb5e00;
+}
+
+.slick-dots li.slick-active:before {
+    width: 77px;
 }

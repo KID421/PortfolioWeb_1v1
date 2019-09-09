@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微軟正黑體;
+}
+
+body {
+    background-color: #eee;
+}
+
+/* 滑入效果 */
+.img-hover {
+    /* 父元素：相對定位 */
+    position: relative;
+}
+
+/* .img-hover 滑入 時 裡面的 p 元素 */
+.img-hover:hover p {
+    opacity: 1;
+}
+
+.img-hover p {
+    /* 子元素：絕對定位 */
+    position: absolute;
+    background-color: gold;
+    color: white;
+    padding: 30px;
+    /* 水平與垂直置中對齊 */
+    /* 上與左都 50% */
+    top: 50%;
+    left: 50%;
+    /* 變形：位移上與下都 -50% */
+    transform: translateX(-50%) translateY(-50%);
+
+    opacity: 0;
+    transition: 1s;
+}
+
+.img-hover img {
+    width: 100%;
+}
+
+/* 幻燈片 */
+.slider {
+    width: 90vw;
+    margin: 0 auto;
+}
+
+/* slick 外掛 */
+.slick-prev {
+    left: 20px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 20px;
+    z-index: 1;
+}
