@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="企業名稱網站，設計作品。">
+    <title>企業名稱 | 作品</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="main">
+        <header id="navigation">
+            <div id="logo"><a href="index.html">LOGO</a></div>
+            <nav id="nav-bar">
+                <a href="works.html">WORKS</a>
+                <a href="">INFO</a>
+                <a href="">CONTACT</a>
+            </nav>
+        </header>
+
+        <nav id="tags">
+            <a class="btn-all">All</a>
+            <a class="btn-gold">Gold</a>
+            <a class="btn-black">Black</a>
+            <a class="btn-orange">Orange</a>
+        </nav>
+
+        <section class="work-box beer-gold">
+            <div class="work-box-left">
+                <h1>Work1</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#gold</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_a.png" alt="beer">
+                <img src="img/beer_a.png" alt="beer">
+            </div>
+        </section>
+
+        <section class="work-box beer-black">
+            <div class="work-box-left">
+                <h1>Work2</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#black</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_b.png" alt="beer">
+                <img src="img/beer_b.png" alt="beer">
+            </div>
+        </section>
+
+        <section class="work-box beer-orange">
+            <div class="work-box-left">
+                <h1>Work3</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#orange</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_c.png" alt="beer">
+                <img src="img/beer_c.png" alt="beer">
+            </div>
+        </section>
+
+        <section class="work-box beer-gold">
+            <div class="work-box-left">
+                <h1>Work1</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#gold</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_a.png" alt="beer">
+                <img src="img/beer_a.png" alt="beer">
+            </div>
+        </section>
+
+        <section class="work-box beer-black">
+            <div class="work-box-left">
+                <h1>Work2</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#black</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_b.png" alt="beer">
+                <img src="img/beer_b.png" alt="beer">
+            </div>
+        </section>
+
+        <section class="work-box beer-orange">
+            <div class="work-box-left">
+                <h1>Work3</h1>
+                <p class="tag">#beer</p>
+                <p class="tag">#orange</p>
+            </div>
+            <div class="work-box-right">
+                <img src="img/beer_c.png" alt="beer">
+                <img src="img/beer_c.png" alt="beer">
+            </div>
+        </section>
+
+        <footer>Copyright &copy; 2019 KID All rights reserved</footer>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 自己的 js -->
+    <script src="js/main.js"></script>
+    <script>
+        $('.work-box-right').slick({
+            autoplay: true,
+            autoplaySpeed: 1500,
+            dots: true,
+        });
+    </script>
+    <script>
+        // filter('.btn-all', '.work-box');
+        // filter('.btn-gold', '.beer-gold');
+        // filter('.btn-black', '.beer-black');
+        // filter('.btn-orange', '.beer-orange');
+
+        // function filter(nameBtn, nameClass){
+        //     $(nameBtn).click(function(){
+        //         $('.work-box').removeClass('appear').addClass('disappear');
+        //         $(nameClass).removeClass('disappear').addClass('appear');
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

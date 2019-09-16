@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #979797;
+}
+
+body {
+    height: 2000px;
+    background-color: #eee;
+}
+
+#main {
+    width: 92%;
+    max-width: 1400px;
+    /* 外距：上下 左右 */
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* 導覽列 */
+#navigation {
+    padding: 40px 20px 0 20px;
+    overflow: hidden;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+#logo {
+    float: left;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+}
+#logo a {
+    text-decoration: none;
+    color: #fbb400;
+}
+#logo a::before {
+    content: "{";
+    vertical-align: 3.5px;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+#logo a::after {
+    content: "}";
+    vertical-align: 3.5px;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+#nav-bar {
+    float: right;
+    vertical-align: bottom;
+}
+#nav-bar a {
+    text-decoration: none;
+    margin-left: 35px;
+    color: #fbb400;
+    display: inline-block;
+    font-weight: 600;
+    transition: 0.5s;
+
+    /* 定位：相對定位 (父元素) */
+    position: relative;
+}
+#nav-bar a:hover {
+    color: #fbb400;
+}
+#nav-bar a:hover::before {
+    background-color: #fbb400;
+}
+#nav-bar a::before {
+    content: "";
+    /* 定位：絕對定位 (子元素) */
+    position: absolute;
+    background-color: #fbb400;
+    width: 98%;
+    height: 1px;
+    /* 上下 左右 */
+    margin: 0 1%;
+    bottom: -3px;
+}
+
+
+.container {
+    padding-top: 10vh;
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 2;
+    letter-spacing: 3px;
+}
+
+#title2 {
+    padding-top: 10vh;
+}
