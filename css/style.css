@@ -107,8 +107,9 @@
     grid-template-columns: 60% 40%;
     height: 82vh;
     padding: 20px 0;
+    cursor: grab;
+    overflow: hidden;
 }
-
 .work-description {
     padding-top: 50px;
 }
@@ -218,14 +219,14 @@ footer {
 
 /* slick 外掛 */
 .slider {
-    transform: scaleX(0);
+    transform: translateX(100vw);
     transform-origin: 100% 50%;
     animation: 2s 1 3.5s slider forwards ease;
 }
 
 @keyframes slider {
     100% {
-        transform: scaleX(1);
+        transform: translateX(0);
     }
 }
 
@@ -459,5 +460,79 @@ li.slick-active:nth-child(3) button:before{
 @keyframes logo {
     100% {
         opacity: 1;
+    }
+}
+
+/* 關於我 information */
+#information section {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#information .time {
+    font-size: 3em;
+    text-align: right;
+    padding-right: 80px;
+    border-right: 1px solid #373737;
+    position: relative;
+}
+#information .description {
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+#information .time:after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #666;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    z-index: 1;
+}
+#information .description p {
+    padding: 10px 0;
+    line-height: 1.8;
+    letter-spacing: 5px;
+    display: none;
+}
+[data-title] {
+    position: relative;
+}
+
+[data-title]:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100px;
+    left: -400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    #navigation {
+        font-size: 0.7em;
+    }
+    .work {
+        grid-template-columns: 1fr;
+        height: 1350px;
+    }
+    .work-description {
+        height: 600px;
+    }
+    .work-img {
+        height: 700px;
+    }
+    .work-a-bg img {
+        left: -100px;
+    }
+    .work-b-bg img {
+        left: 0px;
+    }
+    .work-c-bg img {
+        left: 0px;
+        top: 50px;
     }
 }

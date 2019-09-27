@@ -37,3 +37,8 @@ filter('.btn-gold', '.beer-gold');
 filter('.btn-black', '.beer-black');
 filter('.btn-orange', '.beer-orange');
 filter('.btn-all', '.work-box');
+
+// 關於我 information 點擊標題顯示內文
+$(".description h2").click(function(){
+    $(this).next('p').slideToggle(800);
+});

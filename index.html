@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="企業名稱網站，設計作品。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>企業名稱 | 首頁</title>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <div id="loading">
+    <!-- <div id="loading">
         <div id="color"></div>
         <div id="logo-text">
             <div>
@@ -22,13 +23,13 @@
                 <span>O</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <div id="main">
         <header id="navigation">
             <div id="logo"><a href="index.html">LOGO</a></div>
             <nav id="nav-bar">
                 <a href="works.html">WORKS</a>
-                <a href="">INFO</a>
+                <a href="information.html">INFO</a>
                 <a href="">CONTACT</a>
             </nav>
         </header>
@@ -101,8 +102,8 @@
 
     <script>
         $('.slider').slick({
-            autoplay: true,
-            autoplaySpeed: 1500,
+            autoplay: false,
+            autoplaySpeed: 5000,
             dots: true,
             appendDots: $('#work-nav')
         });
