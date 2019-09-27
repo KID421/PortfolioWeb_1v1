@@ -217,6 +217,18 @@ footer {
 }
 
 /* slick 外掛 */
+.slider {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    animation: 2s 1 3.5s slider forwards ease;
+}
+
+@keyframes slider {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 .slick-dots {
     position: static;
     height: 3vh;
@@ -376,5 +388,76 @@ li.slick-active:nth-child(3) button:before{
         height: 500px;
         display: block;
         transform: scale(1);
+    }
+}
+
+/* Loading */
+#loading {
+    height: 100vh;
+    width: 100vw;
+    background-color: #eee;
+    position: fixed;
+    z-index: 2;
+    animation: 1.3s 1 3s loadout forwards ease-in-out;
+}
+
+@keyframes loadout {
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+#loading #color {
+    background-color: #373737;
+    height: 100vh;
+    width: 0;
+    z-index: 3;
+    animation: 2s 1 color forwards ease;
+}
+
+@keyframes color {
+    100% {
+        width: 100vw;
+    }
+}
+
+#loading #logo-text {
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: 10px;
+}
+
+#loading #logo-text span {
+    color: #fbb400;
+    opacity: 0;
+}
+
+#loading #logo-text span:nth-of-type(1) {
+    /* 動畫時間 次數 延遲時間 動畫名稱 動畫方向 */
+    animation: 1s 1 1s logo forwards ease-in;
+}
+
+#loading #logo-text span:nth-of-type(2) {
+    animation: 1s 1 1.3s logo forwards ease-in;
+}
+
+#loading #logo-text span:nth-of-type(3) {
+    animation: 1s 1 1.6s logo forwards ease-in;
+}
+
+#loading #logo-text span:nth-of-type(4) {
+    animation: 1s 1 1.9s logo forwards ease-in;
+}
+
+@keyframes logo {
+    100% {
+        opacity: 1;
     }
 }
